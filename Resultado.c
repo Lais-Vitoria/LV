@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <locale.h>
 
 float Validar()
 {
@@ -9,7 +10,7 @@ float Validar()
         scanf("%f", &Nota[i]);
         if (Nota[i] < 1 || Nota[i] > 10.0)
         {
-            printf("Nota invalida digite novamente: ");
+            printf("Nota inválida digite novamente: ");
             scanf("%f", &Nota[i]);
         }   
         ValorTotal = ValorTotal + Nota[i];
@@ -19,10 +20,11 @@ float Validar()
 
 int main ()
 {
+    setlocale(LC_ALL, "Portuguese");
     int Opcao;
     float Media[1], Validar();
     char Nome[1][50];
-    printf("digite um numero superio p/ finalizar: ");
+    printf("Digite um número superio p/ finalizar: ");
     scanf("%d", &Opcao);
     getchar();
     for (int i = 0; i < Opcao; i++)
@@ -31,11 +33,12 @@ int main ()
         scanf("%[^\n]", Nome[i]);
         Media[i]= Validar();
         getchar();
+          
     }
     printf("\nLista Numerada\n");
     for (int i = 0; i < Opcao; i++)
     {
-        printf("\n%d. %s - Media: %.1f - ", i+1, Nome[i], Media[i]);
+        printf("\n%d. %s - Média: %.1f - ", i+1, Nome[i], Media[i]);
         if (Media[i] >= 6.0)
         {
             printf("AP");
