@@ -20,7 +20,7 @@ int main ()
         {
             soma[k] = SeqA[k] + SeqB[k];
         }
-        for ( k = 0; k < 10; k++)
+        for ( k = 0; k <10; k++)
         {
             printf("Vetor soma [%d] = %d\n", k +1, soma[k]);
         }
