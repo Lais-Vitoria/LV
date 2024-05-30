@@ -23,7 +23,8 @@ int main()
 
             //leitura da data do cheque.
             printf("\n\nEntre com a data no formato dd/mm/aaaa: ");
-            scanf(" %2d %2d %4d", &Dia[i], &Mes[i], &Ano[i]);
+            scanf(" %2d/%2d/%4d", &Dia[i], &Mes[i], &Ano[i]);
+
 
             //leitura do valor do cheque.
             Valor[i] = Valor1(); 
